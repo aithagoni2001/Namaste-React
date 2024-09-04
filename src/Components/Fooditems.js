@@ -3,7 +3,7 @@ import {CDN_LINK} from "../utils/constants"
 const Fooditems = (props) => {
     // console.log(props);
     const {Resdata} = props;
-    console.log(Resdata);
+    // console.log(Resdata);
     const{cloudinaryImageId,name,cuisines,avgRating,costForTwo,areaName} = Resdata?.info;
     return (
       <div className="fooditems">
