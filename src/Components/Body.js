@@ -1,6 +1,6 @@
 import Fooditems from "./Fooditems";
 import { Restaurants } from "../utils/Apidata";
-import { useEffect, useState, useState } from "react";
+import { useEffect, useState} from "react";
 
 const Body = () => {
   const [Res, setRes] = useState(Restaurants); // State to store the list of restaurants
