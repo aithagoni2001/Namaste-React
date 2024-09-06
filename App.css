@@ -36,14 +36,15 @@
     width: 200px;
 }
 .fooditems{
+
     margin-top: 0px;
     margin-bottom: 0%;
-    width: 245px;
-    height: 350px;
+    width: 200px;
+    /* height: 350px; */
     background-color: 
     rgb(248, 245, 245);
-    padding: 10px 5px;
-    margin: 5px;
+    padding: 10px 0px 0px 5px;
+    margin: 8px;
     border-radius: 5px;
     box-shadow: 0px 1px 2px black;
 
@@ -57,16 +58,46 @@
     margin-top: 0%;
     width: 100px;
     margin-bottom: 0%;
-    padding-left: 70px;
+    padding-left: 50px;
    
 }
 .res-container{
     margin-top: 0%;
     display: flex;
     flex-wrap: wrap;
+    margin-right: 0px;
   
 }
-.filter-btn{
-    margin: 10px;
+.Ratefilter-btn{
+    margin-left: 100px;
     cursor: pointer;
+    height:23px;
+    margin-top: 8px;
+}
+
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.shimmer-card{
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    /* padding: 5px; */
+    border: 1px solid #a29e9e;
+    background-color: #f7f4f4;
+}
+.login-btn{
+    padding: 0px 20px;
+}
+
+.filter-btn{
+    height: 20px;
+}
+.search{
+    display: flex;
+}
+.filter{
+    display: flex;
+    margin-top: 5px;
 }
