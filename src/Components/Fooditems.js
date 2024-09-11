@@ -13,7 +13,7 @@ const Fooditems = (props) => {
             alt="loading"
           />
           <h2>{name}</h2>
-          <p className="cuisine">{cuisines}</p>
+          <p className="cuisine">{cuisines.join(", ")}</p>
           <h4>{costForTwo}</h4>
           <h4>{avgRating}</h4>
           <p>{areaName}</p>

@@ -23,6 +23,7 @@
     padding: 10px;
     list-style: none;
    font-weight: bold;
+  
     
 }
 
@@ -30,6 +31,7 @@
     font-size: 15px;
     overflow: hidden;
     margin-top: 0%;
+    color: black;
 }
 .search{
     padding: 10px 0px;
@@ -40,13 +42,20 @@
     margin-top: 0px;
     margin-bottom: 0%;
     width: 200px;
-    /* height: 350px; */
+    max-height: fit-content;
+    min-height: 375px;
     background-color: 
     rgb(248, 245, 245);
     padding: 10px 0px 0px 5px;
     margin: 8px;
     border-radius: 5px;
     box-shadow: 0px 1px 2px black;
+    color: rgb(14, 13, 13);
+
+    
+
+
+    
 
 }
 .fooditems:hover{
@@ -66,6 +75,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-right: 0px;
+    
   
 }
 .Ratefilter-btn{
@@ -100,4 +110,14 @@
 .filter{
     display: flex;
     margin-top: 5px;
+}
+.menu-image{
+    width: 100px;
+  
+}
+.main-menu{
+    border:1px solid black;
+}
+.menu-border{
+    border-bottom: 1px solid black;
 }

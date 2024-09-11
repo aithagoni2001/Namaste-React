@@ -1,6 +1,7 @@
 import Fooditems from "./Fooditems";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [Res, setRes] = useState([]); // State to store the list of restaurants
@@ -55,7 +56,7 @@ const Body = () => {
       <div className="res-container">
         {/* Loop through the filtered restaurants (Filtereddata) or all restaurants (Res) */}
         {restaurantsToDisplay.map((reslist) => (
-          <Fooditems key={reslist.info.id} Resdata={reslist} />
+          <Link key={reslist.info.id} to={"/restaurants/"+ reslist.info.id}><Fooditems Resdata={reslist} /></Link>
         ))}
       </div>
     </div>
