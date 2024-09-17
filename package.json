@@ -5,7 +5,7 @@
   "main": "App.js",
   "scripts": {
     "test": "jest",
-    "start": "parcel index.html -p 2001 --open chrome",
+    "start": "parcel index.html -p 1501 --open chrome",
     "build": "parcel build index.html"
   },
   "repository": {

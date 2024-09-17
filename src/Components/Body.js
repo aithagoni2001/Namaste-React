@@ -2,6 +2,7 @@ import Fooditems from "./Fooditems";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlinestatus from "../utils/useOnlinestatus";
 
 const Body = () => {
   const [Res, setRes] = useState([]); // State to store the list of restaurants
@@ -17,10 +18,21 @@ const Body = () => {
     const jsondata = await data.json();
     setRes(jsondata?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants); // Store fetched data in Res
   };
-
   // Determine what data to display: filtered or original
   const restaurantsToDisplay = Filtereddata.length > 0 ? Filtereddata : Res;
 
+const onlinestatus = useOnlinestatus()
+  if (onlinestatus===false) {
+    return(
+      <div>
+        <h1>
+      No internet connection👾
+    </h1>
+        <h2>please check internet connectivity📶</h2>
+
+      </div>
+    ) 
+  }
   // Conditional rendering: show Shimmer while loading
   return Res.length === 0 ? (<Shimmer />) : (
     <div className="body">

@@ -6,7 +6,8 @@ const Fooditems = (props) => {
     // console.log(Resdata);
     const{cloudinaryImageId,name,cuisines,avgRating,costForTwo,areaName} = Resdata?.info;
     return (
-      <div className="fooditems">
+      <div className="fooditems" 
+      >
           <img
             className="image"
             src={ CDN_LINK + cloudinaryImageId}
