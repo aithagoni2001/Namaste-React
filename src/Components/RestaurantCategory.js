@@ -1,10 +1,10 @@
 
 import ItemList from "./ItemsList";
 
-const RestaurantCategory = ({ data, showitems,setshowIndex }) => {
+const RestaurantCategory = ({ data, showitems,setShowIndex }) => {
     
   const handleClick=()=>{
-    setshowIndex();
+    setShowIndex();
   }
 
   return (
