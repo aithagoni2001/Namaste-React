@@ -9,6 +9,7 @@ const Header = () => {
   const Onlinestatus = useOnlinestatus();
 
     return (
+<<<<<<< HEAD
       <div className="flex justify-between bg-slate-300 shadow-lg">
        
           <img
@@ -29,6 +30,29 @@ const Header = () => {
             <Link to="/instamart">Instamart</Link></li>
             <li className="p-5"> Cart</li>
             <button className="p-5"
+=======
+      <div className="header">
+        <div className="logo-con">
+          <img
+            className="logo"
+            src={LOGO_URL}
+            alt="loading"
+          />
+        </div>
+        <div className="header-items">
+          <ul className="orderlist">
+            <li className="list">Onlinestatus:{Onlinestatus? "✅":"🚫"}</li>
+            <li className="list">
+            <Link to="/">Home</Link></li>
+            <li className="list">
+            <Link to="/about">About Us</Link></li>
+            <li className="list">
+            <Link to="/contact">Contact Us</Link></li>
+            <li className="list">
+            <Link to="/instamart">Instamart</Link></li>
+            <li className="list"> Cart</li>
+            <button className="login-btn"
+>>>>>>> b13f0bec07cd1ec2793178187dcfcec6abf5ac2f
              onClick={()=>{btnName==="login"? setbtnName("logout"): setbtnName("login");
               console.log(btnName)}}
               >{btnName}</button> 

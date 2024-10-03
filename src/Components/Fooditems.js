@@ -6,6 +6,7 @@ const Fooditems = (props) => {
     // console.log(Resdata);
     const{cloudinaryImageId,name,cuisines,avgRating,costForTwo,areaName} = Resdata?.info;
     return (
+<<<<<<< HEAD
       <div className="fooditems m-3 p-2 w-[200px] border border-solid border-black bg-gray-100 hover:bg-gray-300 " 
       >
           <img
@@ -14,6 +15,16 @@ const Fooditems = (props) => {
             alt="loading"
           />
           <h2 className="font-bold py-2 text-lg">{name}</h2>
+=======
+      <div className="fooditems" 
+      >
+          <img
+            className="image"
+            src={ CDN_LINK + cloudinaryImageId}
+            alt="loading"
+          />
+          <h2>{name}</h2>
+>>>>>>> b13f0bec07cd1ec2793178187dcfcec6abf5ac2f
           <p className="cuisine">{cuisines.join(", ")}</p>
           <h4>{costForTwo}</h4>
           <h4>{avgRating}</h4>
@@ -22,6 +33,7 @@ const Fooditems = (props) => {
     );
   };
 
+<<<<<<< HEAD
   export const withPromotedlabel = (Fooditems)=>{
     return (props)=>{
       return(
@@ -33,4 +45,6 @@ const Fooditems = (props) => {
     }
   }
 
+=======
+>>>>>>> b13f0bec07cd1ec2793178187dcfcec6abf5ac2f
   export default Fooditems;
