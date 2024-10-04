@@ -1,9 +1,13 @@
+import { useContext } from "react";
 import { CDN_LINK } from "../utils/constants";
+import UserContext from "./UserContext";
 
 const Fooditems = (props) => {
   const { Resdata } = props;
   const { cloudinaryImageId, name, cuisines, avgRating, costForTwo, areaName } = Resdata?.info;
-
+  const {LoggedInUser} = useContext(UserContext);
+  // console.log(LoggedInUser);
+  
   return (
     <div className="fooditems m-3 p-2 w-[200px] border border-solid border-black bg-gray-100 hover:bg-gray-300">
       <img
@@ -16,6 +20,7 @@ const Fooditems = (props) => {
       <h4>{costForTwo}</h4>
       <h4>{avgRating}</h4>
       <p>{areaName}</p>
+      <h4 className="text-sm font-semibold">User: {LoggedInUser}</h4>
     </div>
   );
 };

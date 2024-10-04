@@ -3,6 +3,9 @@ import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlinestatus from "../utils/useOnlinestatus";
+import UserContext from "./UserContext";
+import { useContext } from "react";
+
 
 const Body = () => {
   const [restaurants, setRestaurants] = useState([]); // State to store the list of restaurants
@@ -44,6 +47,8 @@ const Body = () => {
     );
   }
 
+  const { LoggedInUser, setUsername } = useContext(UserContext);
+
   // Conditional rendering: show Shimmer while loading
   if (restaurants.length === 0) {
     return <Shimmer />;
@@ -64,10 +69,11 @@ const Body = () => {
           <button
             className="search-btn px-4 py-1 bg-green-200 rounded mx-2"
             onClick={() => {
-              const filteredRestaurants = restaurants.filter((restaurant) =>
-                restaurant.info.name
-                  .toLowerCase()
-                  .includes(searchText.toLowerCase()) // Filter by search text
+              const filteredRestaurants = restaurants.filter(
+                (restaurant) =>
+                  restaurant.info.name
+                    .toLowerCase()
+                    .includes(searchText.toLowerCase()) // Filter by search text
               );
               setFilteredData(filteredRestaurants); // Update filtered data state
             }}
@@ -90,13 +96,26 @@ const Body = () => {
             Top Rated Restaurants
           </button>
         </div>
+        <div className="m-2 ">
+          <label>UserName: </label>
+          
+          <input  value ={LoggedInUser} 
+            className="border border-black px-1"
+            onChange={(e) => 
+            setUsername(e.target.value)
+            }
+          />
+        </div>
       </div>
 
       {/* Restaurants List */}
       <div className="res-container flex flex-wrap">
         {/* Loop through the filtered restaurants or all restaurants */}
         {filteredData.map((restaurant) => (
-          <Link key={restaurant.info.id} to={"/restaurants/" + restaurant.info.id}>
+          <Link
+            key={restaurant.info.id}
+            to={"/restaurants/" + restaurant.info.id}
+          >
             {restaurant.info.isOpen ? (
               <RestaurantCardPromoted Resdata={restaurant} />
             ) : (
