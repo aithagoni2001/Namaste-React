@@ -5,6 +5,7 @@ import { additems } from "../utils/ReduxStore/CartSlice";
 const ItemList = ({ items }) => {
   // console.log(items);
 
+  // dispatching the action
   const dispatch = useDispatch();
   const handleclick = (item) => {
     dispatch(additems(item));

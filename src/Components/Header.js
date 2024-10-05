@@ -12,6 +12,7 @@ const Header = () => {
   const {LoggedInUser} = useContext(UserContext);
   // console.log(LoggedInUser);
 
+  // subscribing the store
   const cartitems = useSelector((store)=>store.cart.items);
 
   console.log(cartitems)
@@ -38,7 +39,9 @@ const Header = () => {
           <li className="p-5">
             <Link to="/instamart">Instamart</Link>
           </li>
-          <li  class="p-4 text-xl text-red-600 ">🛒({cartitems.length})</li>
+          <li  class="p-4 text-xl text-red-600 ">
+          <Link to ="/cart">🛒({cartitems.length})</Link>
+          </li>
           <button
             className="p-5"
             onClick={() => {
