@@ -4,6 +4,8 @@ import UserContext from "./UserContext";
 
 const Fooditems = (props) => {
   const { Resdata } = props;
+  console.log(Resdata);
+  
   const { cloudinaryImageId, name, cuisines, avgRating, costForTwo, areaName } = Resdata?.info;
   const {LoggedInUser} = useContext(UserContext);
   // console.log(LoggedInUser);

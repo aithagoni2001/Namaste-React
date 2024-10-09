@@ -16,10 +16,10 @@ class About extends React.Component {
     // console.log("Parent render called");
 
     return (
-      <div className="m-3 p-2">
-        <h1>About Us</h1>
+      <div className="m-3 p-2 text-center">
+        <h1 className="font-bold text-3xl">About Us</h1>
         <p>This is the about us page from Namaste React</p>
-        <div>
+         <div>
         <UserContext.Consumer>
           {({LoggedInUser})=><h1 className="text-sm font-semibold">{LoggedInUser}</h1>}
           </UserContext.Consumer>

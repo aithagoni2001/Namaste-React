@@ -2,7 +2,27 @@ import { render,screen } from "@testing-library/react"
 import Contact from "../Contact";
 import "@testing-library/jest-dom";
 
-test("should load heading in contact component",()=>{
+describe("should test contact component",()=>{
+
+    beforeAll(()=>{
+        console.log("before all");
+        
+    });
+    beforeEach(()=>{
+        console.log("before each");
+    });
+
+    afterAll(()=>{
+        console.log("after all");
+        
+    });
+
+    afterEach(()=>{
+        console.log("after each");
+        
+    })
+    
+it("should load heading in contact component",()=>{
 
     render(<Contact/>)
 
@@ -11,9 +31,7 @@ test("should load heading in contact component",()=>{
     // Assertion
     expect(heading).toBeInTheDocument();
 })
-
-
-test("should load button in contact component",()=>{
+it("should load button in contact component",()=>{
 
     render(<Contact/>);
 
@@ -21,16 +39,14 @@ test("should load button in contact component",()=>{
 
     expect(button).toBeInTheDocument()
 })
-
-test("should load submit text in contact component",()=>{
+it("should load submit text in contact component",()=>{
     render(<Contact/>);
 
    const submit =screen.getByText("Submit");
 
    expect(submit).toBeInTheDocument();
 })
-
-test("should load input boxes in contact component",()=>{
+it("should load input boxes in contact component",()=>{
     render(<Contact/>)
 // querying
    const input= screen.getAllByRole("textbox");
@@ -38,4 +54,5 @@ test("should load input boxes in contact component",()=>{
    
    expect(input.length).toBe(2);
 //    expect(input.length).not.toBe(3);
+})
 })

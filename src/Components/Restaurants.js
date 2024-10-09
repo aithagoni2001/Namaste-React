@@ -27,7 +27,7 @@ const Restaurants = () => {
 
   return (
     <div>
-      <div className="Res-menu m-5 p-2 text-center">
+      <div data-testid ="resCard" className="Res-menu m-5 p-2 text-center">
         <h1 className="font-bold text-lg">{name}</h1>
         <p>
           {cuisines.join(", ")} - {costForTwoMessage}
